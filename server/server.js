@@ -1,15 +1,15 @@
 Meteor.methods({
-  callToJun: function() {
+  callCustomer: function(customerTel, messageUrl) {
     var twilio = Twilio(Meteor.settings.twilioAccountSid, Meteor.settings.twilioAuthToken);
     twilio.makeCall({
-      to: Meteor.settings.phoneNumberOfJun,
+      to: customerTel,
       from: Meteor.settings.twilioNumber,
-      url: 'https://demo.twilio.com/docs/voice.xml'
+      url: messageUrl
     }, function(err, responseData) {
       if (err) {
         console.log(err);
       }
-      console.log(responseData.from);
+      console.log('calling to: ' + responseData.from);
     });
   }
 });
