@@ -21,14 +21,17 @@ msavin:mongol
 erasaur:meteor-lodash
 raix:handlebar-helpers
 
+fourseven:scss
 kadira:flow-router
 kadira:blaze-layout
 fortawesome:fontawesome
 aldeed:collection2
 aldeed:autoform
+gildaspk:autoform-materialize
 accounts-ui
 accounts-password
 accounts-facebook
 msavin:jetsetter
 gwendall:auth-client-callbacks
 accolver:twilio-meteor
+materialize:materialize
