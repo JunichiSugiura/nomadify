@@ -28,6 +28,7 @@ aldeed:collection2
 aldeed:autoform
 accounts-ui
 accounts-password
+accounts-facebook
 msavin:jetsetter
 gwendall:auth-client-callbacks
 accolver:twilio-meteor
