@@ -1,4 +1,4 @@
-Template.twilioButton.events({
+Template.Twilio.events({
   'click #call': function() {
     var customerTel = Meteor.settings.public.phoneNumberOfJun;
     var messageUrl = 'http://localhost:3030/twilio/notification-message.xml';
