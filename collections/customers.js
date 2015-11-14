@@ -15,7 +15,7 @@ CustomerSchema = new SimpleSchema({
     label: 'Name'
   },
   tel: {
-    type: Number,
+    type: String,
     label: 'Tel'
   },
   numberOfPeople: {
