@@ -1,5 +1,11 @@
 Restaurants = new Mongo.Collection('restaurants');
 
+Restaurants.allow({
+  insert: function(userId, doc) {
+    return !!userId;
+  }
+});
+
 RestaurantSchema = new SimpleSchema({
   name: {
     type: String,
@@ -32,6 +38,11 @@ RestaurantSchema = new SimpleSchema({
     autoform: {
       type: 'hidden'
     }
+  },
+  url: {
+    type: String,
+    optional: true,
+    label: 'url'
   }
 });
 
