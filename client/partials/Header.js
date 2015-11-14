@@ -29,7 +29,10 @@ Template.Header.events({
 });
 
 Template.Header.helpers({
+  pictureExist: function() {
+    return (typeof Meteor.user().profile != "undefined")
+  },
   userProfile: function() {
-    return Meteor.user();
+    return Meteor.user().profile;
   }
 });
