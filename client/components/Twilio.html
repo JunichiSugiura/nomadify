@@ -1,3 +1,12 @@
 <template name="Twilio">
+  <div class="new-customer-box">
+    <h2>お客様情報</h2>
+    {{> quickForm collection="Customers" id="insertCustomerForm" type="insert" class="new-customer-form"}}
+  </div>
+
   <button id="call">Call</button>
+
+  <div class="waiting-list">
+    {{> WaittingList}}
+  </div>
 </template>
