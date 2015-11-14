@@ -10,16 +10,6 @@ Template.AdminRestaurantDashboard.helpers({
     return Restaurants.findOne({});
   },
   topGenresChart: function() {
-    Meteor.call('checkedIn', function(error, response) {
-      Session.set('checkedIn', response);
-    });
-    Meteor.call('canceled', function(error, response) {
-      Session.set('canceled', response);
-      });
-    Meteor.call('dissapeared', function(error, response) {
-      Session.set('dissapeared', response);
-    });
-
     return {
       chart: {
         plotBackgroundColor: null,
@@ -50,9 +40,9 @@ Template.AdminRestaurantDashboard.helpers({
         type: 'pie',
         name: 'genre',
         data: [
-          ['Checked in', parseInt(Session.get('checkedIn'))],
-          ['Canceled', parseInt(Session.get('canceled'))],
-          ['Dissapeared', parseInt(Session.get('dissapeared'))]
+          ['Checked in', 45.0],
+          ['Canceled', 30.0],
+          ['Dissapeared', 25.0]
         ]
       }]
     };
