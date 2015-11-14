@@ -1,13 +1,17 @@
 <template name="Restaurants">
-  <div class="restaurants">
-    <h2>Restaurants</h2>
-    <div class="search">
-      <input type="text" id="q" placeholder="Search" value=""/>
+  <div class="container">
+    <div class="row">
+      <div class="restaurants">
+        <h2>Restaurants</h2>
+        <div class="search">
+          <input type="text" id="q" placeholder="Search" value=""/>
+        </div>
+        {{#if Template.subscriptionsReady}}
+          {{#each restaurants}}
+            {{> Restaurant}}
+          {{/each}}
+        {{/if}}
+      </div>
     </div>
-    {{#if Template.subscriptionsReady}}
-      {{#each restaurants}}
-        {{> Restaurant}}
-      {{/each}}
-    {{/if}}
   </div>
 </template>

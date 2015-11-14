@@ -1,10 +1,14 @@
 <template name="AdminRestaurants">
-  <div class="admin-restaurants">
-    <h2>Restaurants</h2>
-    {{#if Template.subscriptionsReady}}
-      {{#each restaurants}}
-        {{> AdminRestaurant}}
-      {{/each}}
-    {{/if}}
+  <div class="container">
+    <div class="row">
+      <div class="admin-restaurants">
+        <h2>Restaurants</h2>
+        {{#if Template.subscriptionsReady}}
+          {{#each restaurants}}
+            {{> AdminRestaurant}}
+          {{/each}}
+        {{/if}}
+      </div>
+    </div>
   </div>
 </template>
