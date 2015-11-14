@@ -1,14 +1,21 @@
 <template name="WaitingList">
-  <div class="waiting-list">
-    <div class="new-customer-box">
+  <div class="container">
+    <div class="row">
       <h2>Sign up for Waiting List!</h2>
-      {{> quickForm collection="Customers" id="insertCustomerForm" type="insert" class="new-customer-form" options="allowed"}}
-    </div>
-    <div>
-      <h2>Waiting List</h2>
-      {{#each customers}}
-        {{> Customer}}
-      {{/each}}
+      <div class="card grey lighten-5 hoverable">
+        <div class="card-content black-text">
+          <div class="new-customer-box">
+            <span class="card-title activator"></span>
+            {{> quickForm collection="Customers" id="insertCustomerForm" type="insert" class="new-customer-form" options="allowed"}}
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <h2>Waiting List</h2>
+        {{#each customers}}
+          {{> Customer}}
+        {{/each}}
+      </div>
     </div>
   </div>
 </template>
