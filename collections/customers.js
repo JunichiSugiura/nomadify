@@ -56,6 +56,7 @@ CustomerSchema = new SimpleSchema({
   consequence: {
     type: String,
     label: 'consequence',
+    optional: true,
     autoform: {
       type: 'hidden'
     }
@@ -63,6 +64,7 @@ CustomerSchema = new SimpleSchema({
   postponeCount: {
     type: Number,
     label: 'postpone count',
+    optional: true,
     autoform: {
       type: 'hidden'
     }
