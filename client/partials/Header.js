@@ -27,3 +27,12 @@ Template.Header.events({
     AccountsTemplates.logout();
   }
 });
+
+Template.Header.helpers({
+  pictureExist: function() {
+    return (typeof Meteor.user().profile != "undefined")
+  },
+  userProfile: function() {
+    return Meteor.user().profile;
+  }
+});
