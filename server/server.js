@@ -1,9 +1,9 @@
 Meteor.methods({
   callCustomer: function(customerTel, messageUrl) {
-    var twilio = Twilio(Meteor.settings.twilioAccountSid, Meteor.settings.twilioAuthToken);
+    var twilio = Twilio(Meteor.settings.private.twilioAccountSid, Meteor.settings.private.twilioAuthToken);
     twilio.makeCall({
       to: customerTel,
-      from: Meteor.settings.twilioNumber,
+      from: Meteor.settings.private.twilioNumber,
       url: messageUrl
     }, function(err, responseData) {
       if (err) {

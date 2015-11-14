@@ -1,17 +1,25 @@
 Meteor.subscribe('customers');
 
 Template.AdminCustomer.events({
-  'click #twilio': function() {
-    var customer = Customers.find({_id: this._id});
-    var messageUrl = 'http://localhost:3030/twilio/notification-message.xml';
+  'click #twilio': function(evt) {
+    evt.preventDefault();
+
+    var customer = Customers.findOne({_id: this._id});
+    var stringTel = customer.tel.toString();
+    var customerTel = '+81' + stringTel.substr(0);
+    var messageUrl = 'http://jun-microscope.meteor.com/twilio/notification-message.xml';
 
     Meteor.call('callCustomer', customerTel, messageUrl, function(err, result) {
       if (err) {
         console.log(err);
+      } else {
+        console.log('Calling by Twilio');
       }
     });
   },
-  'click #remove': function() {
+  'click #remove': function(evt) {
+    evt.preventDefault();
+
     if (!confirm('本当に削除しますか？')) {
   		return false;
   	}
