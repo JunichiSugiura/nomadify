@@ -10,9 +10,12 @@
               <a class="dropdown-button" href="#!" data-activates="user-dropdown">
                 {{#if currentUser}}
                   {{#if pictureExist}}
-                    <img src="{{userProfile.picture}}"/><span class="name">{{userProfile.name}}</span>
+                  <ul>
+                    <li><img src="{{userProfile.picture}}"/></li>
+                    <li><span class="name">{{userProfile.name}}</span></li>
+                  </ul>
                   {{else}}
-                    <i class="material-icons">assignment_ind</i>  
+                    <i class="material-icons">assignment_ind</i>
                   {{/if}}
                 {{else}}
                   <i class="material-icons">assignment_ind</i>
