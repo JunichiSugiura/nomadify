@@ -24,5 +24,12 @@ Template.AdminCustomer.events({
   		return false;
   	}
     Customers.remove({ _id: this._id });
+  },
+  'click #check': function(evt) {
+    evt.preventDefault();
+
+    Customers.update(this._id, {
+      $set: { checkedIn: ! this.checkedIn }
+    });
   }
 });
