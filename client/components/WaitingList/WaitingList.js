@@ -2,6 +2,6 @@ Meteor.subscribe('customers');
 
 Template.WaitingList.helpers({
   customers: function() {
-    return Customers.find({});
+    return Customers.find({status: 'waiting'});
   }
 });
