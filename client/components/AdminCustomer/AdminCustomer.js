@@ -4,7 +4,7 @@ Template.AdminCustomer.events({
   'click #twilio': function(evt) {
     evt.preventDefault();
 
-    var customer = Customers.findOne({_id: this._id});
+    var customer = Customers.findOne({ _id: this._id });
     var stringTel = customer.tel.toString();
     var customerTel = '+81' + stringTel.substr(0);
     var messageUrl = 'http://jun-microscope.meteor.com/twilio/notification-message.xml';
@@ -23,6 +23,6 @@ Template.AdminCustomer.events({
     if (!confirm('本当に削除しますか？')) {
   		return false;
   	}
-    Customers.remove({_id: this._id});
+    Customers.remove({ _id: this._id });
   }
 });
