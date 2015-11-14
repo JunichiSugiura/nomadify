@@ -6,7 +6,7 @@ Template.AdminRestaurants.onCreated(function() {
 });
 
 Template.AdminRestaurants.helpers({
-  restaurants: () => {
+  restaurants: function() {
     return Restaurants.find();
   }
 });
