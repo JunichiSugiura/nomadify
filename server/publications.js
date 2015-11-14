@@ -7,3 +7,7 @@ Meteor.methods({
     return Restaurants.find({owner: Meteor.userId}).count();
   }
 });
+
+Meteor.publish('customers', function () {
+  return Customers.find({restaurantId: this.userId});
+});
