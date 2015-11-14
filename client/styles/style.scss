@@ -6,9 +6,14 @@ header {
     height: 64px;
   }
   img {
-    width: 50px;
+    width: 45px;
+    height: auto;
     border-radius: 50%;
-    margin: 7px;
+    line-height: 50px;
+    vertical-align: middle;
+  }
+  li {
+    margin: 0 5px;
   }
 }
 
