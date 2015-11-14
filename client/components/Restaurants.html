@@ -1,6 +1,10 @@
 <template name="Restaurants">
-  <h2>Restaurants</h2>
-  {{#each myRestaurants}}
-    {{> Restaurant}}
-  {{/each}}
+  <div class="restaurants">
+    <h2>Restaurants</h2>
+    {{#if Template.subscriptionsReady}}
+      {{#each restaurants}}
+        {{> Restaurant}}
+      {{/each}}
+    {{/if}}
+  </div>
 </template>
