@@ -1,0 +1,10 @@
+<template name="Restaurants">
+  <div class="restaurants">
+    <h2>Restaurants</h2>
+    {{#if Template.subscriptionsReady}}
+      {{#each restaurants}}
+        {{> Restaurant}}
+      {{/each}}
+    {{/if}}
+  </div>
+</template>
