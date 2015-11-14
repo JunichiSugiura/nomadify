@@ -68,6 +68,14 @@ CustomerSchema = new SimpleSchema({
     autoform: {
       type: 'hidden'
     }
+  },
+  checkedIn: {
+    type: Boolean,
+    label: 'Checked In',
+    defaultValue: false,
+    autoform: {
+      type: 'hidden'
+    }
   }
 });
 
