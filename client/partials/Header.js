@@ -27,3 +27,9 @@ Template.Header.events({
     AccountsTemplates.logout();
   }
 });
+
+Template.Header.helpers({
+  userProfile: function() {
+    return Meteor.user();
+  }
+});
