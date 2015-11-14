@@ -3,6 +3,9 @@ Customers = new Mongo.Collection('customers');
 Customers.allow({
   insert: function(userId, doc) {
     return !!doc;
+  },
+  remove: function(userId, doc) {
+    return !!userId;
   }
 });
 
@@ -18,11 +21,6 @@ CustomerSchema = new SimpleSchema({
   numberOfPeople: {
     type: Number,
     label: 'Number Of People'
-  },
-  info: {
-    type: String,
-    label: 'Seat',
-    allowedValues: ['Non-smoking', 'Smoking', 'Anywhere']
   },
   createdAt: {
     type: Date,
@@ -40,6 +38,14 @@ CustomerSchema = new SimpleSchema({
     autoValue: function() {
       return this.userId
     },
+    autoform: {
+      type: 'hidden'
+    }
+  },
+  status: {
+    type: String,
+    label: 'status',
+    defaultValue: 'watting',
     autoform: {
       type: 'hidden'
     }

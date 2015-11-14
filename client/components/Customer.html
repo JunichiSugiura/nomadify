@@ -5,11 +5,14 @@
         <div class="card grey lighten-5">
           <div class="card-content black-text">
             <span class="card-title">{{ name }}</span>
-            <p>{{ numberOfPeople }}人</p>
+            <ul>
+              <li><p>{{ numberOfPeople }}人</p></li>
+              <li><p style="float:right"><i class="material-icons">person_pin</i>{{ status }}</p></li>
+            </ul>
           </div>
           <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href="#">This is a link</a>
+            <a href="#" id="twilio">Twilio</a>
+            <a href="#" id="remove">Remove</a>
           </div>
         </div>
       </div>
