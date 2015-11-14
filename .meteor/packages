@@ -28,10 +28,11 @@ fortawesome:fontawesome
 aldeed:collection2
 aldeed:autoform
 gildaspk:autoform-materialize
-accounts-ui
+useraccounts:materialize
 accounts-password
 accounts-facebook
 msavin:jetsetter
 gwendall:auth-client-callbacks
 accolver:twilio-meteor
 materialize:materialize
+service-configuration

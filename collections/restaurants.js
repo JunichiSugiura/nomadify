@@ -18,6 +18,9 @@ RestaurantSchema = new SimpleSchema({
     label: 'Owner',
     autoValue: function() {
       return this.userId
+    },
+    autoform: {
+      type: 'hidden'
     }
   },
   createdAt: {
