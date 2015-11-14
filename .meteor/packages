@@ -36,3 +36,4 @@ gwendall:auth-client-callbacks
 accolver:twilio-meteor
 materialize:materialize
 service-configuration
+arillo:flow-router-helpers
