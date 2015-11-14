@@ -3,6 +3,9 @@ Customers = new Mongo.Collection('customers');
 Customers.allow({
   insert: function(userId, doc) {
     return !!doc;
+  },
+  remove: function(userId, doc) {
+    return !!userId;
   }
 });
 
