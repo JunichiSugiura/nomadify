@@ -1,0 +1,8 @@
+<template name="AdminRestaurantDashboard">
+  <div class="admin-restaurant-dashboard">
+    {{#with restaurant}}
+      <h2>{{ name }}</h2>
+    {{/with}}
+    {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
+  </div>
+</template>

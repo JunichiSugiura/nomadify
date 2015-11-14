@@ -52,6 +52,20 @@ CustomerSchema = new SimpleSchema({
     autoform: {
       type: 'hidden'
     }
+  },
+  consequence: {
+    type: String,
+    label: 'consequence',
+    autoform: {
+      type: 'hidden'
+    }
+  },
+  postponeCount: {
+    type: Number,
+    label: 'postpone count',
+    autoform: {
+      type: 'hidden'
+    }
   }
 });
 
