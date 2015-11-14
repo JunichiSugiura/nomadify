@@ -19,6 +19,11 @@ CustomerSchema = new SimpleSchema({
     type: Number,
     label: 'Number Of People'
   },
+  info: {
+    type: String,
+    label: 'Seat',
+    allowedValues: ['Non-smoking', 'Smoking', 'Anywhere']
+  },
   createdAt: {
     type: Date,
     label: 'Created At',
