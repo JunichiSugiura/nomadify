@@ -1,6 +1,10 @@
 <template name="RestaurantSignUp">
-  <div class="restaurant-sign-up">
-    <h2>レストランを登録</h2>
-    {{> quickForm collection="Restaurants" id="insertRestaurantForm" type="insert" class="new-restaurant-form"}}
+  <div class="container">
+    <div class="row">
+      <div class="restaurant-sign-up">
+        <h2>Add Restaurant</h2>
+        {{> quickForm collection="Restaurants" id="insertRestaurantForm" type="insert" class="new-restaurant-form"}}
+      </div>
+    </div>
   </div>
 </template>
