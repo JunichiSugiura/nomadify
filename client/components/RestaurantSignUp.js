@@ -1,7 +1,7 @@
 AutoForm.hooks({
   insertRestaurantForm: {
     onSuccess: function(){
-      FlowRouter.go('waiting-list');
+      FlowRouter.go('admin-waiting-list');
     }
   }
 });

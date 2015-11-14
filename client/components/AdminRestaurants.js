@@ -1,11 +1,11 @@
-Template.Restaurants.onCreated(function() {
+Template.AdminRestaurants.onCreated(function() {
   var self = this;
   self.autorun(function() {
     self.subscribe('restaurants');
   });
 });
 
-Template.Restaurants.helpers({
+Template.AdminRestaurants.helpers({
   restaurants: () => {
     return Restaurants.find();
   }

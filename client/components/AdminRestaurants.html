@@ -1,9 +1,9 @@
-<template name="Restaurants">
-  <div class="restaurants">
+<template name="AdminRestaurants">
+  <div class="admin-restaurants">
     <h2>Restaurants</h2>
     {{#if Template.subscriptionsReady}}
       {{#each restaurants}}
-        {{> Restaurant}}
+        {{> AdminRestaurant}}
       {{/each}}
     {{/if}}
   </div>

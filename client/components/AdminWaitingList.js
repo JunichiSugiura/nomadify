@@ -1,6 +1,6 @@
 Meteor.subscribe('customers');
 
-Template.WaitingList.helpers({
+Template.AdminWaitingList.helpers({
   customers: function() {
     return Customers.find({});
   }
