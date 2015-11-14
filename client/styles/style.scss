@@ -23,8 +23,12 @@ main {
     text-align: center;
   }
   .sign-in, .sign-up, .restaurant-sign-up, .admin-restaurants, .admin-waiting-list,
-  .restaurant, .waiting-list {
+  .restaurant, .waiting-list, .search {
     width: 30%;
     margin: auto;
+  }
+  .restaurantTb {
+    width: 50%;
+    text-align: center !important;
   }
 }
