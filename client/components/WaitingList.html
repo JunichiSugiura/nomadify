@@ -1,3 +1,13 @@
 <template name="WaitingList">
-  <h2>Waiting List</h2>
+  <div class="new-customer-box">
+    <h2>お客様情報</h2>
+    {{> quickForm collection="Customers" id="insertCustomerForm" type="insert" class="new-customer-form"}}
+  </div>
+
+  <div class="waiting-list">
+    <h2>Waiting List</h2>
+    {{#each customers}}
+      {{> Customer}}
+    {{/each}}
+  </div>
 </template>
