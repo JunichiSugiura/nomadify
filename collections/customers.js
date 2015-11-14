@@ -45,7 +45,7 @@ CustomerSchema = new SimpleSchema({
   status: {
     type: String,
     label: 'status',
-    defaultValue: 'watting',
+    defaultValue: 'waiting',
     autoform: {
       type: 'hidden'
     }

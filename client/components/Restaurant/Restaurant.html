@@ -4,13 +4,13 @@
       <div class="card-content black-text">
         <span class="card-title">{{name}}</span>
         <table>
-          <th><i class="material-icons">supervisor_account</i></th>
-          <th><i class="material-icons">supervisor_account</i></th>
-          <th><i class="material-icons">supervisor_account</i></th>
           <tr>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
+            <th class="restaurantTb"><h3>10</h3></th>
+            <th class="restaurantTb"><h3>10</h3></th>
+          </tr>
+          <tr>
+            <td class="restaurantTb">people are waiting.</td>
+            <td class="restaurantTb">min.</td>
           </tr>
         </table>
       </div>
@@ -20,7 +20,9 @@
       </div>
       <div class="card-action">
         <a href="{{pathFor '/restaurants/:id/waiting-list' id=_id}}">Waiting List</a>
-        <a href="{{url}}" target="_blank">Webpage</a>
+        {{#if url}}
+          <a href="{{url}}" target="_blank">Webpage</a>
+        {{/if}}
       </div>
     </div>
   </div>
