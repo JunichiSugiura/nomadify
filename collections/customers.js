@@ -19,11 +19,6 @@ CustomerSchema = new SimpleSchema({
     type: Number,
     label: 'Number Of People'
   },
-  info: {
-    type: String,
-    label: 'Seat',
-    allowedValues: ['Non-smoking', 'Smoking', 'Anywhere']
-  },
   createdAt: {
     type: Date,
     label: 'Created At',
@@ -40,6 +35,14 @@ CustomerSchema = new SimpleSchema({
     autoValue: function() {
       return this.userId
     },
+    autoform: {
+      type: 'hidden'
+    }
+  },
+  status: {
+    type: String,
+    label: 'status',
+    defaultValue: 'watting',
     autoform: {
       type: 'hidden'
     }
