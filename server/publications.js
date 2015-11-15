@@ -9,7 +9,7 @@ Meteor.methods({
 });
 
 Meteor.publish('customers', function () {
-  return Customers.find({restaurantId: this.userId});
+  return Customers.find({});
 });
 
 Meteor.methods({

@@ -1,28 +1,31 @@
 <template name="AdminRestaurant">
   <div class="admin-restaurant">
-    <div class="card">
-      <a href="{{pathFor '/admin/restaurants/:id/waiting-list' id=_id}}">
-        <div class="card-content black-text">
-          <span class="card-title">{{name}}</span>
-          <a style="float:right" href="{{ pathFor '/admin/restaurant/:id/dashboard' id=_id }}"><i class="material-icons">dashboard</i></a>
-          <table>
-            <tr>
-              <th class="restaurantTb"><h3>10</h3></th>
-              <th class="restaurantTb"><h3>10</h3></th>
-            </tr>
-            <tr>
-              <td class="restaurantTb">people are waiting.</td>
-              <td class="restaurantTb">min.</td>
-            </tr>
-          </table>
+    <div class="card hoverable">
+      <div class="card-content black-text">
+        <div class="right">
+          <a class="btn-floating btn-small waves-effect waves-light red activator info"><i class="small material-icons">info_outline</i></a>
         </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-       </a>
+        <span class="card-title">{{name}}</span>
+        <table>
+          <tr>
+            <th class="restaurantTb"><h3>{{waitingCustomerNum}}</h3></th>
+            <th class="restaurantTb"><h3>{{avgWaitingTime}}</h3></th>
+          </tr>
+          <tr>
+            <td class="restaurantTb">people are waiting.</td>
+            <td class="restaurantTb">min.</td>
+          </tr>
+        </table>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Info<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
       <div class="card-action">
-        <a href="{{url}}" target="_blank">Jump to Webpage</a>
+        <a href="{{pathFor '/admin/restaurants/:id/waiting-list' id=_id}}">Waiting List</a>
+        {{#if url}}
+          <a href="{{url}}" target="_blank">Webpage</a>
+        {{/if}}
       </div>
     </div>
   </div>

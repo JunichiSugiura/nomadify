@@ -4,7 +4,10 @@
       <div class="">
         <div class="card grey lighten-5">
           <div class="card-content black-text">
-            <span class="card-title">{{ name }}<a style="float:right" id="check" class="waves-effect waves-light btn">Check!</a></span>
+            <div class="right">
+              <a class="btn-floating btn-small waves-effect waves-light" id="check"><i class="small material-icons">check</i></a>
+            </div>
+            <span class="card-title">{{ name }}</span>
             <ul>
               <li><p>{{ numberOfPeople }}人</p></li>
               <li><p style="float:right"><i class="material-icons">person_pin</i>{{ status }}</p></li>

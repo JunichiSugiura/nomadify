@@ -38,9 +38,6 @@ CustomerSchema = new SimpleSchema({
   restaurantId: {
     type: String,
     label: 'Restaurant Id',
-    autoValue: function() {
-      return this.userId
-    },
     autoform: {
       type: 'hidden'
     }

@@ -1,6 +1,6 @@
 <template name='Header'>
   <header>
-    <nav class="top-nav blue-grey">
+    <nav class="top-nav orange">
       <div class="container">
         <ul class="right">
           <li>
@@ -8,7 +8,7 @@
               {{#if currentUser}}
                 {{#if pictureExist}}
                 <ul>
-                  <li><img src="{{userProfile.picture}}"/></li>
+                  <li><img class="responsive-img" src="{{userProfile.picture}}"/></li>
                   <li>{{userProfile.name}}</li>
                 </ul>
                 {{else}}
