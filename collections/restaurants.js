@@ -11,6 +11,10 @@ RestaurantSchema = new SimpleSchema({
     type: String,
     label: 'Name'
   },
+  desc: {
+    type: String,
+    label: 'Desc'
+  },
   tel: {
     type: Number,
     label: 'Tel'

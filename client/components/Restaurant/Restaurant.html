@@ -2,6 +2,11 @@
   <div class="restaurant">
     <div class="card">
       <div class="card-content black-text">
+        <div class="right">
+          <ul>
+            <li><a class="btn-floating btn-small waves-effect waves-light red activator info"><i class="small material-icons">info_outline</i></a></li>
+          </ul>
+        </div>
         <span class="card-title">{{name}}</span>
         <table>
           <tr>
@@ -15,8 +20,8 @@
         </table>
       </div>
       <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
-        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        <span class="card-title grey-text text-darken-4">Description<i class="material-icons right">close</i></span>
+        <p>{{ desc }}</p>
       </div>
       <div class="card-action">
         <a href="{{pathFor '/restaurants/:id/waiting-list' id=_id}}">Waiting List</a>
