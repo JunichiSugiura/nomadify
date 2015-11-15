@@ -2,7 +2,7 @@ $(".button-collapse").sideNav();
 
 Template.Header.rendered = function() {
   Meteor.setTimeout(function() {
-    
+
     this.$('.dropdown-button').dropdown({
       inDuration: 300,
       outDuration: 225,
@@ -25,7 +25,7 @@ Template.Header.rendered = function() {
 Template.Header.events({
   'click .logout': function(evt) {
     evt.preventDefault();
-    
+
     AccountsTemplates.logout();
   }
 });
@@ -36,5 +36,13 @@ Template.Header.helpers({
   },
   userProfile: function() {
     return Meteor.user().profile;
+  },
+  admin: function() {
+    var url = location.href;
+    if (url.indexOf('admin') != -1) {
+      return true
+    } else {
+      return false
+    }
   }
 });
