@@ -8,5 +8,4 @@ Template.WaitingList.onRendered(function() {
 Template.WaitingList.helpers({
   customers: function() {
     return Customers.find({ restaurantId: Session.get('restaurantId'), checkedIn: false });
-  }
 });
