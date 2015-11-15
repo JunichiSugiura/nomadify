@@ -7,6 +7,21 @@
         {{/with}}
         {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
       </div>
+      <div class="admin-customers-index">
+        <div class="admin-restaurant-dashboard">
+          <h2>Customers</h2>
+          {{#each customers}}
+            <div class="card hoverable">
+              <div class="card-content black-text">
+                <span class="card-title">{{name}}</span>
+              </div>
+              <div class="card-action">
+                <a href="">Send SMS</a>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
     </div>
   </div>
 </template>

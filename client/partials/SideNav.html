@@ -1,8 +1,12 @@
 <template name="SideNav">
   <ul id="nav-mobile" class="side-nav fixed" style="width: 240px;">
     <li class="logo"><a class="brand-logo" href="/admin/restaurants"><h1>Nomadify</h1></a></li>
-    <li><a href="#!">Restaurants</a></li>
-    <li><a href="#!">Customers</a></li>
+    {{#if admin}}
+      <li><a href="/admin/restaurants">Admin Restaurants</a></li>
+      <li><a href="/restaurants">Customers Restaurants</a></li>
+    {{else}}
+      <li><a href="/restaurants">Restaurants</a></li>
+    {{/if}}
   </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 </template>

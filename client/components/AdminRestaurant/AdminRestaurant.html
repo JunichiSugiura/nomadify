@@ -3,7 +3,12 @@
     <div class="card hoverable">
       <div class="card-content black-text">
         <div class="right">
-          <a class="btn-floating btn-small waves-effect waves-light red activator info"><i class="small material-icons">info_outline</i></a>
+          <ul>
+            <li><a class="btn-floating btn-small waves-effect waves-light red activator info"><i class="small material-icons">info_outline</i></a></li>
+          </ul>
+          <ul>
+            <li><li><a class="dashboard-btn" href="{{pathFor '/admin/restaurants/:id/dashboard' id=_id}}"><i class="small material-icons">dashboard</i></a></li></li>
+          </ul>
         </div>
         <span class="card-title">{{name}}</span>
         <table>
@@ -18,8 +23,8 @@
         </table>
       </div>
       <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Info<i class="material-icons right">close</i></span>
-        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        <span class="card-title grey-text text-darken-4">Description<i class="material-icons right">close</i></span>
+        <p>{{ desc }}</p>
       </div>
       <div class="card-action">
         <a href="{{pathFor '/admin/restaurants/:id/waiting-list' id=_id}}">Waiting List</a>
