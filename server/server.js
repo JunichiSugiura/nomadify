@@ -15,13 +15,14 @@ Meteor.methods({
 
   updateCustomerStatus: function(num, customerId) {
     var customer = Customers.findOne({ _id: customerId });
-    if (customer.tel == num.substr(1))
-    Customers.update(customerId, { $set: { status: 'canceled' } }, function(err, doc) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log(doc);
-      }
-    });
+    if (customer.tel == num.substr(1)) {
+      Customers.update(customerId, { $set: { status: 'canceled' } }, function(err, doc) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(doc);
+        }
+      });
+    }
   }
 });

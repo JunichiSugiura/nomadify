@@ -20,10 +20,11 @@ Template.AdminCustomer.events({
   'click #remove': function(evt) {
     evt.preventDefault();
 
-    if (!confirm('本当に削除しますか？')) {
+    if (!confirm('Are you sure?')) {
   		return false;
   	}
     Customers.remove({ _id: this._id });
+    Materialize.toast('Removed', 4000);
   },
   'click #check': function(evt) {
     evt.preventDefault();
@@ -31,5 +32,6 @@ Template.AdminCustomer.events({
     Customers.update(this._id, {
       $set: { checkedIn: ! this.checkedIn }
     });
+    Materialize.toast('Checked', 4000);
   }
 });

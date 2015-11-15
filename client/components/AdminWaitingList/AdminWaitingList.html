@@ -3,8 +3,16 @@
     <div class="row">
       <div class="admin-waiting-list">
         <div class="new-customer-box">
-          <h2>Customer Form</h2>
-          {{> quickForm collection="Customers" id="insertCustomerForm" type="insert" class="new-customer-form" options="allowed"}}
+          <h2 style="float:left;">Customer Form</h2>
+          <div class="restaurant-status" style="float:right;vertical-align:bottom;">
+            <i class="material-icons">supervisor_account</i>
+            <a class="btn-floating btn-large waves-effect waves-light red"><span style="font-size:18px;">{{ waitingCustomerNum }}</span></a>
+            <i class="material-icons">av_timer</i>
+            <a class="btn-floating btn-large waves-effect waves-light red"><span style="font-size:18px;">{{ WaitingTime }}</span></a>
+          </div>
+          <div style="clear:both">
+            {{> quickForm collection="Customers" id="insertCustomerForm" type="insert" class="new-customer-form" options="allowed"}}
+          </div>
         </div>
         <div>
           <h2>Waiting List</h2>

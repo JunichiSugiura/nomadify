@@ -1,5 +1,5 @@
 Meteor.publish('restaurants', function () {
-  return Restaurants.find({owner: this.userId});
+  return Restaurants.find({});
 });
 
 Meteor.methods({

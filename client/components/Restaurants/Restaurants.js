@@ -6,7 +6,7 @@ Template.Restaurants.onCreated(function() {
 });
 
 Template.Restaurants.helpers({
-  restaurants: () => {
+  restaurants: function() {
     var q = Session.get('q');
     console.log(q);
     return Restaurants.find({ name: { $regex: new RegExp(q, 'i') } });
