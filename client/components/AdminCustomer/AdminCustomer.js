@@ -7,7 +7,7 @@ Template.AdminCustomer.events({
     var customer = Customers.findOne({ _id: this._id });
     var stringTel = customer.tel.toString();
     var customerTel = '+81' + stringTel.substr(0);
-    var messageUrl = 'http://jun-microscope.meteor.com/twilio/notification-message.xml';
+    var messageUrl = 'http://nomadify.meteor.com/twilio/notification-message.xml';
 
     Meteor.call('callCustomer', customerTel, messageUrl, function(err, result) {
       if (err) {

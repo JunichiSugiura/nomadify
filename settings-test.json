@@ -1,0 +1,12 @@
+{
+  "public": {
+    "phoneNumberOfJun": "+818065530366"
+  },
+  "private": {
+    "twilioAccountSid": "AC8b367dd3e072d936ffe2f5980629dfac",
+    "twilioAuthToken": "7d12e913b3596f09d8d0f5f6cca2dda5",
+    "twilioNumber": "+81345402959",
+    "facebookAppId": "1441665132638761",
+    "facebookAppSecret": "d4c671b205c4e07f7f9b9d59cd71aa91"
+  }
+}
