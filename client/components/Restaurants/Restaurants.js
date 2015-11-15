@@ -14,7 +14,7 @@ Template.Restaurants.helpers({
 });
 
 Template.Restaurants.events({
-  'keyup #q': function(e) {
+  'keyup #search': function(e) {
     FlowRouter.setQueryParams({ q: e.target.value || null });
     var q = location.search.substr(1).split('=')[1];
     Session.set('q', q);
