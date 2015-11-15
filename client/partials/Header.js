@@ -1,3 +1,5 @@
+$(".button-collapse").sideNav();
+
 Template.Header.rendered = function() {
   Meteor.setTimeout(function() {
     

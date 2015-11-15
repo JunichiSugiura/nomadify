@@ -1,3 +1,13 @@
+body {
+  background: #eee;
+}
+
+#nav-mobile {
+  h1 {
+    color: #ccc;
+  }
+}
+
 header {
   .name {
     line-height: 50px;
@@ -11,9 +21,6 @@ header {
     border-radius: 50%;
     line-height: 50px;
     vertical-align: middle;
-  }
-  li {
-    margin: 0 5px;
   }
 }
 
