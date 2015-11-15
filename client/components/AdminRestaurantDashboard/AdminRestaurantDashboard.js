@@ -1,3 +1,5 @@
+Meteor.subscribe('customers');
+
 Template.AdminRestaurantDashboard.onCreated(function() {
   var self = this;
   self.autorun(function() {
@@ -6,8 +8,13 @@ Template.AdminRestaurantDashboard.onCreated(function() {
 });
 
 Template.AdminRestaurantDashboard.helpers({
+  customers: function() {
+    var restaurantId = Session.get('restaurantId');
+    return Customers.find({ restaurantId: restaurantId });
+  },
   restaurant: function() {
-    return Restaurants.findOne({});
+    var restaurantId = Session.get('restaurantId');
+    return Restaurants.findOne({ _id: restaurantId });
   },
   topGenresChart: function() {
     return {
