@@ -3,9 +3,9 @@
     <nav class="top-nav orange">
       <div class="container">
         <ul class="right">
-          <li>
-            <a class="dropdown-button" href="#!" data-activates="user-dropdown">
-              {{#if admin}}
+          {{#if admin}}
+            <li>
+              <a class="dropdown-button" href="#!" data-activates="user-dropdown">
                 {{#if currentUser}}
                   {{#if pictureExist}}
                   <ul>
@@ -18,9 +18,9 @@
                 {{else}}
                   <i class="material-icons small">assignment_ind</i>
                 {{/if}}
-              {{/if}}
-            </a>
-          </li>
+              </a>
+            </li>
+          {{/if}}
         </ul>
 
         <ul id="user-dropdown" class="dropdown-content">
