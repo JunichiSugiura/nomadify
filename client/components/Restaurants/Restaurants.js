@@ -1,4 +1,5 @@
 Template.Restaurants.onCreated(function() {
+  Session.set('q', '');
   var self = this;
   self.autorun(function() {
     self.subscribe('restaurants');
