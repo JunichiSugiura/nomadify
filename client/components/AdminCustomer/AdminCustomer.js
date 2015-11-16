@@ -4,6 +4,7 @@ Template.AdminCustomer.events({
   'click #twilio': function(evt) {
     evt.preventDefault();
 
+    Materialize.toast('Calling', 4000);
     var customer = Customers.findOne({ _id: this._id });
     var stringTel = customer.tel.toString();
     var customerTel = '+81' + stringTel.substr(0);
