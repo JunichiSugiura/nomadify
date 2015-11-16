@@ -7,6 +7,10 @@
           {{#each restaurants}}
             {{> AdminRestaurant}}
           {{/each}}
+        {{ else }}
+          <div style="text-align:center;">
+            {{> Loading }}
+          </div>
         {{/if}}
       </div>
     </div>

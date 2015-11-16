@@ -10,8 +10,13 @@
             <i class="material-icons">av_timer</i>
             <a class="btn-floating btn-large waves-effect waves-light red"><span style="font-size:18px;">{{ WaitingTime }}</span></a>
           </div>
-          <div style="clear:both">
-            {{> quickForm collection="Customers" id="insertCustomerForm" type="insert" class="new-customer-form" options="allowed"}}
+          <div class="card grey lighten-5 hoverable" style="clear:both;">
+            <div class="card-content black-text">
+              <div class="new-customer-box">
+                <span class="card-title activator"></span>
+                {{> quickForm collection="Customers" id="insertCustomerForm" type="insert" class="new-customer-form" options="allowed"}}
+              </div>
+            </div>
           </div>
         </div>
         <div>

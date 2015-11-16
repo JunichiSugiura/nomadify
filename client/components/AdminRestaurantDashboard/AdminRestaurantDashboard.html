@@ -5,22 +5,9 @@
         {{#with restaurant}}
           <h2>{{ name }}</h2>
         {{/with}}
-        {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
-      </div>
-      <div class="admin-customers-index">
-        <div class="admin-restaurant-dashboard">
-          <h2>Customers</h2>
-          {{#each customers}}
-            <div class="card hoverable">
-              <div class="card-content black-text">
-                <span class="card-title">{{name}}</span>
-              </div>
-              <div class="card-action">
-                <a href="">Send SMS</a>
-              </div>
-            </div>
-          {{/each}}
-        </div>
+        {{> highchartsHelper chartId="CustomerResponse" chartWidth="100%" charHeight="100%" chartObject=CustomerResponse}}
+        {{> highchartsHelper chartId="Age" chartWidth="100%" charHeight="100%" chartObject=Age}}
+        {{> highchartsHelper chartId="Gender" chartWidth="100%" charHeight="100%" chartObject=Gender}}
       </div>
     </div>
   </div>

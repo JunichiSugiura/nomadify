@@ -6,7 +6,7 @@
         <a href="/" class="brand-logo">Nomadify</a>
         <ul class="side-nav"  id="menu">
           {{#if currentUser}}
-            <li><a href="/admin/restaurants">Restaurants</a></li>
+            <li><a href="/admin/restaurants">My Restaurants</a></li>
             <li><a href="/restaurants">Customer Page</a></li>
             <li><a href="/add-restaurant">Add Restaurant</a></li>
             <li><a href="#" class="logout" data-action="logout">Sign Out</a></li>
@@ -17,7 +17,7 @@
 
         <ul class="right hide-on-med-and-down">
           {{#if currentUser}}
-            <li><a href="/admin/restaurants">Restaurants</a></li>
+            <li><a href="/admin/restaurants">My Restaurants</a></li>
             <li><a href="/restaurants">Customer Page</a></li>
           {{else}}
             <li><a href="/restaurants">Restaurants</a></li>
@@ -53,44 +53,3 @@
     </nav>
   </header>
 </template>
-
-
-<!-- <template name='Header'>
-  <header>
-    <nav class="top-nav orange">
-      <div class="container">
-        <ul class="right">
-          {{#if admin}}
-            <li>
-              <a class="dropdown-button" href="#!" data-activates="user-dropdown">
-                {{#if currentUser}}
-                  {{#if pictureExist}}
-                  <ul>
-                    <li><img class="responsive-img" src="{{userProfile.picture}}"/></li>
-                    <li>{{userProfile.name}}</li>
-                  </ul>
-                  {{else}}
-                    <i class="material-icons small">assignment_ind</i>
-                  {{/if}}
-                {{else}}
-                  <i class="material-icons small">assignment_ind</i>
-                {{/if}}
-              </a>
-            </li>
-          {{/if}}
-        </ul>
-
-        <ul id="user-dropdown" class="dropdown-content">
-          {{#if currentUser}}
-            <li><a href="/add-restaurant">Add Restaurant</a></li>
-            <li><a href="#" class="logout" data-action="logout">Sign Out</a></li>
-          {{else}}
-            <li><a href="/sign-in">Sign in</a></li>
-            <li><a href="/sign-up">Register</a></li>
-          {{/if}}
-        </ul>
-      </div>
-    </nav>
-    {{> SideNav}}
-  </header>
-</template> -->

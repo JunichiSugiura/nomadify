@@ -29,6 +29,14 @@ Template.AdminWaitingList.helpers({
 
 Template.AdminWaitingList.events({
   'submit': function() {
-    Materialize.toast('Added to the list', 4000);
+    var name = $('input[name="name"]').val();
+    var tel = $('input[name="tel"]').val();
+    var numberOfPeople = $('input[name="numberOfPeople"]').val();
+
+    if (name != '' && tel != '' && numberOfPeople != '') {
+      Materialize.toast('Added to the list', 4000);
+    } else {
+      Materialize.toast('Error', 4000);
+    }
   }
 });
