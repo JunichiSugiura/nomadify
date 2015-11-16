@@ -1,5 +1,6 @@
 Template.Restaurants.onCreated(function() {
   Session.set('q', '');
+  $('input#search').val('');
   var self = this;
   self.autorun(function() {
     self.subscribe('restaurants');
