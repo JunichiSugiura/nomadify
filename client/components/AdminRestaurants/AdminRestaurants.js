@@ -7,6 +7,6 @@ Template.AdminRestaurants.onCreated(function() {
 
 Template.AdminRestaurants.helpers({
   restaurants: function() {
-    return Restaurants.find();
+    return Restaurants.find({ owner: Meteor.userId() });
   }
 });

@@ -44,5 +44,16 @@ Template.Header.helpers({
     } else {
       return false
     }
+  },
+  id: function() {
+    return Session.get('restaurantId');
+  },
+  toCustomerPage: function() {
+    Tracker.autorun(function() {
+      var path = FlowRouter.getRouteName();
+      console.log(path);
+    })
+
+    // return '/products/' + FlowRouter.getParam('_id') + '/view';
   }
 });

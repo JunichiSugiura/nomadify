@@ -6,8 +6,8 @@
         <a href="/" class="brand-logo">Nomadify</a>
         <ul class="side-nav"  id="menu">
           {{#if currentUser}}
+            <li><a id="toCustomerPage" style="display:none;" href="/restaurants/{{ id }}/waiting-list">This Customer Page</a></li>
             <li><a href="/admin/restaurants">My Restaurants</a></li>
-            <li><a href="/restaurants">Customer Page</a></li>
             <li><a href="/add-restaurant">Add Restaurant</a></li>
             <li><a href="#" class="logout" data-action="logout">Sign Out</a></li>
           {{ else }}
@@ -17,8 +17,8 @@
 
         <ul class="right hide-on-med-and-down">
           {{#if currentUser}}
+            <li><a id="toCustomerPage" style="display:none;" href="/restaurants/{{ id }}/waiting-list">This Customer Page</a></li>
             <li><a href="/admin/restaurants">My Restaurants</a></li>
-            <li><a href="/restaurants">Customer Page</a></li>
           {{else}}
             <li><a href="/restaurants">Restaurants</a></li>
           {{/if}}
