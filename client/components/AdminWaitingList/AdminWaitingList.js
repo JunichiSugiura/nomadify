@@ -1,8 +1,6 @@
 Meteor.subscribe('customers');
 
 Template.AdminWaitingList.onRendered(function() {
-  console.log("asdf");
-  $('#toCustomerPage').show();
   var restaurantId = Session.get('restaurantId');
   $('input[name=restaurantId]').val(restaurantId);
 });
@@ -26,6 +24,9 @@ Template.AdminWaitingList.helpers({
     curser.forEach(function(row) {
       console.log(row);
     });
+  },
+  restaurantId: function() {
+    return Session.get('restaurantId');
   }
 });
 
