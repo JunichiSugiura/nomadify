@@ -38,5 +38,8 @@ Template.AdminWaitingList.events({
     } else {
       Materialize.toast('Error', 4000);
     }
+  },
+  'click .toggleForm': function() {
+    $('.customerForm').toggle();
   }
 });
