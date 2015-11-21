@@ -16,13 +16,17 @@
 
               <div style="text-align:center;">
                 <h2>Customer</h2>
-                <a class="waves-effect waves-light btn goRestaurants"><i class="material-icons left">search</i>Search Restaurants</a>
+                <a href="{{pathFor '/restaurants'}}" class="waves-effect waves-light btn"><i class="material-icons left">search</i>Search Restaurants</a>
               </div>
 
               <div style="text-align:center;">
-                <h2>Manager</h2>
-                <a class="waves-effect waves-light btn goSignIn"><i class="material-icons left">perm_identity</i>Sign In</a>
-                <a class="waves-effect waves-light btn goSignUp"><i class="material-icons left">perm_identity</i>Sign Up</a>
+                <h2>Restaurant Owner</h2>
+                {{#if currentUser}}
+                  <a href="{{pathFor '/admin/restaurants'}}" class="waves-effect waves-light btn"><i class="material-icons left">perm_identity</i>My Restaurants</a>
+                {{else}}
+                  <a href="{{pathFor '/sign-in'}}" class="waves-effect waves-light btn"><i class="material-icons left">perm_identity</i>Sign In</a>
+                  <a href="{{pathFor '/sign-up'}}" class="waves-effect waves-light btn"><i class="material-icons left">perm_identity</i>Sign Up</a>
+                {{/if}}
               </div>
 
             </div>
