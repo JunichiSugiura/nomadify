@@ -43,6 +43,6 @@ Template.AdminWaitingList.events({
     }
   },
   'click .toggleForm': function() {
-    $('.customerForm').toggle();
+    $('.customerForm').slideToggle(200);
   }
 });
