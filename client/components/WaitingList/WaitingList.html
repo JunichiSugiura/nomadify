@@ -2,6 +2,11 @@
   <div class="container">
     <div class="row">
       <div  style="margin-top:30px;">
+        <div class="restaurantName">
+          {{#with restaurant }}
+            <h2>{{ name }}</h2>
+          {{/with}}
+        </div>
         <div class="restaurant-status" style="float:right;vertical-align:bottom;">
           <i class="material-icons">supervisor_account</i>
           <span style="font-size:18px;">{{ waitingCustomerNum }}</span>

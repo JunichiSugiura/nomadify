@@ -1,4 +1,5 @@
 Meteor.subscribe('customers');
+Meteor.subscribe('restaurants');
 
 Template.WaitingList.onRendered(function() {
   var restaurantId = Session.get('restaurantId');
@@ -6,6 +7,10 @@ Template.WaitingList.onRendered(function() {
 });
 
 Template.WaitingList.helpers({
+  restaurant: function() {
+    var restaurantId = Session.get('restaurantId');
+    return Restaurants.findOne(restaurantId);
+  },
   customers: function() {
     return Customers.find({ status: 'waiting', restaurantId: Session.get('restaurantId'), checkedIn: false });
   },

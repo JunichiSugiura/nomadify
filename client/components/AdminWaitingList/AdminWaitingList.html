@@ -2,17 +2,22 @@
   <div class="container">
     <div class="row">
       <div class="admin-waiting-list">
+        <div class="restaurantName">
+          {{#with restaurant }}
+            <h2>{{ name }}</h2>
+          {{/with}}
+        </div>
         <div class="new-customer-box" style="margin-top:30px;">
           <a class="btn waves-effect waves-light" href="{{pathFor '/restaurants/:id/waiting-list' id=restaurantId}}">
             <i class="material-icons left">perm_identity</i>View as customers
           </a>
-        <div class="restaurant-status" style="float:right;vertical-align:bottom;">
-          <a class="btn-floating waves-effect waves-light red toggleForm"><i class="material-icons left">add</i></a>
-          <i class="material-icons">supervisor_account</i>
-          <span style="font-size:18px;">{{ waitingCustomerNum }}</span>
-          <i class="material-icons">av_timer</i>
-          <span style="font-size:18px;">{{ WaitingTime }}</span>
-        </div>
+          <div class="restaurant-status" style="float:right;vertical-align:bottom;">
+            <a class="btn-floating waves-effect waves-light red toggleForm"><i class="material-icons left">add</i></a>
+            <i class="material-icons">supervisor_account</i>
+            <span style="font-size:18px;">{{ waitingCustomerNum }}</span>
+            <i class="material-icons">av_timer</i>
+            <span style="font-size:18px;">{{ WaitingTime }}</span>
+          </div>
         </div>
           <div class="card grey lighten-5 hoverable customerForm" style="clear:both;display:none;">
             <div class="card-content black-text">
@@ -24,8 +29,8 @@
           </div>
         <div style="clear:both">
           <h2>Waiting List</h2>
-          {{#each customers}}
-            {{> AdminCustomer}}
+          {{#each customers }}
+            {{> AdminCustomer }}
           {{/each}}
         </div>
       </div>
