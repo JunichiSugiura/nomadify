@@ -1,0 +1,11 @@
+template(name="AdminRestaurants")
+  div.container
+    div.row
+      div.admin-restaurants
+        h2 Restaurants
+        if Template.subscriptionsReady
+          each restaurants
+            +AdminRestaurant
+        else
+          div(style="text-align:center;")
+            +Loading

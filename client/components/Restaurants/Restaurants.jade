@@ -1,0 +1,18 @@
+template(name="Restaurants")
+  div.container
+    div.row
+      div.restaurants
+        h2 Restaurants
+        nav.red
+          div.nav-wrapper
+            form
+              div.input-field
+                input#search(type="search", required)
+                label(for="search")
+                  i.material-icons search
+        if Template.subscriptionsReady
+          each restaurants
+            +Restaurant
+        else
+          div(style="text-align:center;")
+            +Loading

@@ -1,0 +1,30 @@
+template(name="AdminWaitingList")
+  div.container
+    div.row
+      div.admin-waiting-list
+        div.restaurantName
+          with restaurant
+            h2 {{ name }}
+        div.new-customer-box(style="margin-top:30px;")
+          a.btn.waves-effect.waves-light(href="{{pathFor '/restaurants/:id/waiting-list' id=restaurantId}}")
+            i.material-icons.left perm_identity
+            | View as customers
+          div.restaurant-status(style="float:right;vertical-align:bottom;")
+            a.btn-floating.waves-effect.waves-light.red.toggleForm
+              i.material-icons.left add
+            span(style="font-size:18px;") {{ waitingCustomerNum }}
+            i.material-icons av_timer
+            span(style="font-size:18px;") {{ WaitingTime }}
+        div.card.grey.lighten-5.hoverable.customerForm(style="clear:both;display:none;")
+          div.card-content.black-text
+            div.new-customer-box
+              span.card-title.activator
+                +quickForm(collection="Customers"
+                           id="insertCustomerForm"
+                           type="insert"
+                           class="new-customer-form"
+                           options="allowed")
+        div(style="clear:both")
+          h2 Waiting List
+          each customers
+            +AdminCustomer

@@ -18,7 +18,7 @@ Template.WaitingList.helpers({
     var restaurantId = Session.get('restaurantId');
     return Customers.find({ restaurantId: restaurantId, checkedIn: false, status: 'waiting' }).count();
   },
-  WaitingTime: function() {
+  waitingTime: function() {
     var restaurantId = Session.get('restaurantId');
     var curser = Customers.find({ restaurantId: restaurantId, checkedIn: false, status: 'waiting' }).count();
     return curser * 5;

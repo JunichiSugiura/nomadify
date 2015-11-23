@@ -1,0 +1,18 @@
+template(name="AdminRestaurantDashboard")
+  div.container
+    div.row
+      div.admin-restaurant-dashboard
+        with restaurant
+          h2 {{ name }}
+        +highchartsHelper(chartId="CustomerResponse"
+                          chartWidth="100%"
+                          charHeight="100%"
+                          chartObject=CustomerResponse)
+        +highchartsHelper(chartId="Age"
+                          chartWidth="100%"
+                          charHeight="100%"
+                          chartObject=Age)
+        +highchartsHelper(chartId="Gender"
+                          chartWidth="100%"
+                          charHeight="100%"
+                          chartObject=Gender)

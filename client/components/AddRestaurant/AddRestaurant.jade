@@ -1,0 +1,9 @@
+template(name="AddRestaurant")
+  div.container
+    div.row
+      div.add-restaurant
+        div.card
+          div.card-content.black-text
+            span
+              h2 Add Restaurant
+                +quickForm (collection="Restaurants" id="insertRestaurantForm" type="insert" class="new-restaurant-form")

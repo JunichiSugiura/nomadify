@@ -1,0 +1,25 @@
+template(name="WaitingList")
+  div.container
+    div.row
+      div(style="margin-top:30px;")
+        div.restaurantName
+          with restaurant
+            h2 {{ name }}
+        div.restaurant-status(style="float:right;vertical-align:bottom;")
+          i.material-icons supervisor_account
+          span(style="font-size:18px;") {{ waitingCustomerNum }}
+          i.material-icons av_timer
+          span(style="font-size:18px;") {{ waitingTime }}
+        h2(style="float:left;") Sign up for Waiting List!
+      div.card.grey.lighten-5.hoverable(style="clear:both;")
+        div.card-content.black-text
+          div.new-customer-box
+            span.card-title.activator
+            +quickForm(collection="Customers"
+                       id="insertCustomerForm"
+                       type="insert"
+                       class="new-customer-form"
+                       options="allowed")
+      h2 Waiting List
+      each customers
+        +Customer
