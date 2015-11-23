@@ -21,6 +21,8 @@ msavin:mongol
 erasaur:meteor-lodash
 raix:handlebar-helpers
 
+mquandalle:jade
+
 fourseven:scss
 kadira:flow-router
 kadira:blaze-layout
