@@ -1,0 +1,28 @@
+template(name="AdminRestaurant")
+  div.admin-restaurant
+    div.card.hoverable
+      div.card-content.black-text
+        div.right
+          ul
+            li
+              a.btn-floating.btn-small.waves-effect.waves-light.red.activator.info
+                i.small.material-icons info_outline
+            li
+              a.dashboard-btn(href="{{pathFor '/admin/restaurants/:id/dashboard' id=_id}}")
+                i.small.material-icons dashboard
+        span.card-title {{ name }}
+        table
+          tr
+            td.restaurantTb: h3 {{ waitingCustomerNum }}
+            td.restaurantTb: h3 {{ waitingTime }}
+          tr
+            td.restaurantTb groups are waiting
+            td.restaurantTb mins.
+      div.card-reveal
+        span.card-title.grey-text.text-darken-4 Description
+          i.material-icons.right close
+        p {{ desc }}
+      div.card-action
+        a(href="{{pathFor '/admin/restaurants/:id/waiting-list' id=_id}}") Waiting List
+        if url
+          a(href="{{url}}" target="_blank") Webpage

@@ -1,0 +1,33 @@
+template(name='Header')
+  header
+    nav.orange
+      div.nav-wrapper(style="width:80%;margin:auto;")
+        a.button-collapse(href="#", data-activates="menu")
+          i.material-icons menu
+        a.brand-logo(href="/") Nomadify
+        ul#menu.side-nav
+          if currentUser
+            li: a#toCustomerPage(style="display:none;" href="/restaurants/{{ id }}/waiting-list") This Customer Page
+            li: a(href="/admin/restaurants") My Restaurants
+            li: a(href="/add-restaurant") Add Restaurant
+            li: a.logout(href="#", data-action="logout") Sign Out
+        ul.right.hide-on-med-and-down
+          if currentUser
+            li: a#toCustomerPage(style="display:none;" href="/restaurants/{{ id }}/waiting-list") This Customer Page
+            li: a(href="/admin/restaurants") My Restaurants
+          else
+            li: a(href="/restaurants") Restaurants
+          if currentUser
+            li
+              a.dropdown-button(href="" data-activates="user-dropdown")
+                if pictureExist
+                  ul.avator
+                    li: img.responsive-img(src="{{userProfile.picture}}")
+                    li {{ userProfile.name }}
+                else
+                  ul
+                    li: i.material-icons.small assignment_ind
+        ul#user-dropdown.dropdown-content
+          if currentUser
+            li: a(href="/add-restaurant") Add Restaurant
+            li: a.logout(href="#", data-action="logout") Sign Out

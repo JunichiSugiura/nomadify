@@ -1,0 +1,30 @@
+template(name="HomeLayout")
+  +Header
+  div.container
+    main
+      div.container
+        div.row
+          div.card
+            div.card-content.black-text
+              center
+                span.card-title 待つことができない人へのNomadoな選択肢
+          div.card
+            div.card-content.black-text
+              div(style="text-align:center;")
+                h2 Customer
+                a.waves-effect.waves-light.btn(href="{{pathFor '/restaurants'}}")
+                  i.material-icons.left search
+                  | Search Restaurants
+              div(style="text-align:center;")
+                h2 Restaurant Owner
+                if currentUser
+                  a.waves-effect.waves-light.btn(href="{{pathFor '/admin/restaurants'}}")
+                    i.material-icons.left perm_identity
+                    | Restaurants
+                else
+                  a.waves-effect.waves-light.btn(href="{{pathFor '/sign-in'}}")
+                    i.material-icons.left perm_identity
+                    | Sign In
+                  a.waves-effect.waves-light.btn(href="{{pathFor '/sign-up'}}")
+                    i.material-icons.left perm_identity
+                    | Sign Up

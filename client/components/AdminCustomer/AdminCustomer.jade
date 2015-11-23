@@ -1,0 +1,15 @@
+template(name="AdminCustomer")
+  div.admin-customer
+    div.row
+      div.card.grey.lighten-5
+        div.card-content.black-text
+          div.right
+            a#check.btn-floating.btn-small.waves-effect.waves-light
+              i.small.material-icons check
+          span.card-title {{name}}
+          ul
+            li: p {{ numberOfPeople }}人
+            li: p(style="float:right;"): <i class="material-icons">person_pin</i> {{ status }}
+        div.card-action
+          a#twilio(href="#") Twilio
+          a#remove(href="#") Remove

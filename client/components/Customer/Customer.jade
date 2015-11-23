@@ -1,0 +1,25 @@
+template(name="Customer")
+  div.customer
+    div.row
+      div.card.grey.lighten-5.hoverable
+        div.card-content.black-text(id="{{ _id }}"
+                                    style="height:auto")
+          div.right
+            a.btn-floating.btn-small.waves-effect.waves-light.red.activator
+              i.small.material-icons.delete-btn(id="{{ _id }}") delete
+          span.card-title {{ name }}
+          ul
+            li: p {{ numberOfPeople }}人
+            li: p(style="float:right")
+              i.material-icons person_pin
+              | {{ status }}
+        div.card-reveal
+          span.card-title.grey-text.text-darken-4.activator.close-btn
+            | Remove this list?
+            i.material-icons.right.close-btn close
+          div.card-action
+            label(for="enteredNum") What's your number?
+            input(type="number" class="{{ _id }}")
+            button.btn.waves-effect.waves-light.cancel-waiting.red(id="{{ _id }}", type="submit", name="action")
+              i.material-icons.right delete
+              | Remove
