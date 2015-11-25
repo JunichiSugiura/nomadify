@@ -21,7 +21,7 @@ Template.AdminCustomer.events
     evt.preventDefault()
     if !confirm('Are you sure?')
       return false
-    Customers.remove(_id: @_id), (err, result) ->
+    Customers.remove {_id: @_id}, (err, result) ->
       if err
         Materialize.toast 'Error', 4000
       else
@@ -31,7 +31,7 @@ Template.AdminCustomer.events
   'click #check': (evt) ->
     evt.preventDefault()
 
-    Customer.update @_id, { $set: checkedIn: !@checkedInt }, (err, result) ->
+    Customers.update @_id, { $set: checkedIn: !@checkedInt }, (err, result) ->
       if err
         Materialize.toast 'Error', 4000
       else
